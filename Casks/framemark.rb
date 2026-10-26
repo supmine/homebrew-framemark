@@ -17,5 +17,13 @@ cask "framemark" do
 
   app "Framemark.app"
 
+  # the app is not code-signed, so lift the Gatekeeper quarantine after install
+  postflight_steps do
+    run "/usr/bin/xattr",
+        args:           ["-dr", "com.apple.quarantine", "{{appdir}}/Framemark.app"],
+        writable_paths: ["Framemark.app"],
+        writable_base:  :appdir
+  end
+
   zap trash: "~/Library/Preferences/com.sonyexifframe.SonyExifFrame.plist"
 end
