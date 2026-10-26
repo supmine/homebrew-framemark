@@ -1,7 +1,9 @@
 # Homebrew tap for Framemark
 
 ```bash
-brew install --cask supmine/framemark/framemark
+brew tap supmine/framemark
+brew trust supmine/framemark   # Homebrew 7+ only loads casks from trusted third-party taps
+brew install --cask framemark
 ```
 
 Update with `brew upgrade --cask framemark`. Apple Silicon Macs only.
