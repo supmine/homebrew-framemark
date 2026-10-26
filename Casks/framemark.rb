@@ -1,6 +1,6 @@
 cask "framemark" do
-  version "1.0.3"
-  sha256 "c6be2ae2b2eac8970a515c00516de2eeb12d122cbe7bac0b241f19cccaebd25b"
+  version "1.0.4"
+  sha256 "dd2cd2bf59bb4555a78995e74211931fcabba512aea92a5302b1190ab10679f8"
 
   url "https://github.com/supmine/framemark/releases/download/v#{version}/Framemark-macos-arm64.zip"
   name "Framemark"
